@@ -1,4 +1,4 @@
-var dam = require('./dam.js');
+var dam = require('./jsdam.js');
 
 var myDam = dam.create(5000, 3, function(items) {
     console.log("Dam1: " + items);
