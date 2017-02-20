@@ -1,14 +1,18 @@
+//
+// This module collects items and releases them after so many milliseconds have passed or number of 
+// items have been collected, whichever comes first. 
+//
 module.exports = {
     //
-    // @name The jsdam module.  
+    // This function will create our context. 
+    //
     // @param timeLimit: Number - Max number of milliseconds before releasing items.
     // @param sizeLimit: Number - Max number of items dam will hold before releasing items.
     // @param callback: ([AnyObject]) - Callback function you want invoked each time dam
     // releases.  It will pass the items being released to the callback function.
-    // @return The create function will return an interface w/ two functions; init and add.
-    // Call the init function to start the process.  Use the add function to add items to the dam.
-    // The dam will release if max number of items are reached or max milliseconds has passed, 
-    // whichever comes first.  
+    // @return The create function will return an interface w/ three functions; start, stop, and add.
+    // Call the start/stop functions to start/stop the process.  Use the add function to add items 
+    // to the dam.
     //
     create: function(timeLimit, sizeLimit, callback) {
         var items = [];
@@ -16,14 +20,17 @@ module.exports = {
         var interval;
 
         return {
-            init: function() {
-                setInterval(function() {
+            start: function() {
+                interval = setInterval(function() {
                     if (items.length >= sizeLimit || (items.length && (Date.now() - timeElasped) >= timeLimit)) {
                         timeElasped = Date.now();
                         callback(items.slice());
                         items = [];
                     }
                 }, 100);
+            },
+            stop: function() {
+                clearInterval(interval);
             },
             add: function(item) {
                 items.push(item);
