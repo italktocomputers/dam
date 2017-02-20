@@ -1,0 +1,24 @@
+{
+  "name": "jsdam",
+  "version": "1.0.0",
+  "description": "Simple module that collects items and releases them after so many milliseconds have passed or number of items have been collected.",
+  "main": "jsdam.js",
+  "scripts": {
+    "test": "tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/italktocomputers/jsdam.git"
+  },
+  "keywords": [
+    "dam",
+    "collector",
+    "timer"
+  ],
+  "author": "italktocomputers <andrewschools@me.com> (https://github.com/italktocomputers)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/italktocomputers/jsdam/issues"
+  },
+  "homepage": "https://github.com/italktocomputers/jsdam#readme"
+}
