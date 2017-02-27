@@ -5,7 +5,7 @@ Simple module that collects items and releases them after so many milliseconds h
 ## Code Example
 
 ```javascript
-var dam = require('./jsdam.js');
+var dam = require('jsdam');
 
 //
 // Create our context.  Release dam every 5 seconds, or if length

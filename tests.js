@@ -1,4 +1,4 @@
-var dam = require('./jsdam.js');
+var dam = require('jsdam');
 
 //
 // Create our context.  Release dam every 5 seconds, or if length
