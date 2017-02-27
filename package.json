@@ -1,6 +1,6 @@
 {
   "name": "jsdam",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple module that collects items and releases them after so many milliseconds have passed or number of items have been collected.",
   "main": "jsdam.js",
   "scripts": {
