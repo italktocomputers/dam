@@ -2,6 +2,13 @@
 
 Simple module that collects items and releases them after so many milliseconds have passed or number of items have been collected.
 
+
+## Install
+
+```
+npm install jsdam
+```
+
 ## Code Example
 
 ```javascript
